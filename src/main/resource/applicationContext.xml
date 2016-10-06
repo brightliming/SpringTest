@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="compactDisc" class="soundsystem.SgtPeppers" />
+
+    <!--blankDisc-->
+    <!--<bean id="blankDisc" class="soundsystem.BlankDisc">-->
+        <!--<constructor-arg value="Sgt. Pepper's Lonely Hearts Club Band" />-->
+        <!--<constructor-arg value="The Beatles" />-->
+    <!--</bean>-->
+    <!--<bean id="blankDisc" class="soundsystem.BlankDisc"-->
+            <!--c:title="Sgt. Pepper's Lonely Hearts Club Band"-->
+            <!--c:artist="The Beatles"/>-->
+    <bean id="blankDisc" class="soundsystem.BlankDisc"
+    c:_0="Sgt. Pepper's Lonely Hearts Club Band"
+    c:_1="The Beatles"/>
+
+    <!--cdPlayer-->
+    <!--<bean id="cdPlayer" class="soundsystem.CDPlayer">-->
+        <!--<constructor-arg  ref="compactDisc"/>-->
+    <!--</bean>-->
+    <!--<bean id="cdPlayer" class="soundsystem.CDPlayer"-->
+          <!--c:cd-ref="compactDisc" />-->
+    <bean id="cdPlayer" class="soundsystem.CDPlayer"
+    c:_0-ref="compactDisc" />
+
+
+</beans>
