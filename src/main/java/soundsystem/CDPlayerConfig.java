@@ -11,11 +11,6 @@ import org.springframework.context.annotation.Configuration;
 //@ComponentScan(basePackageClasses = {MarkInterface.class})
 public class CDPlayerConfig {
 
-    @Bean(name="lonelyHeartsClubBand")
-    public CompactDisc sgtPeppers(){
-        return new SgtPeppers();
-    }
-
     @Bean
     public MediaPlayer cdPlayer(CompactDisc compactDisc){
         return new CDPlayer(compactDisc);
